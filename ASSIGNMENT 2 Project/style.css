@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-family: "Roboto-Black", sans-serif;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    background: url("./images/mainbackground.jpg") center center no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    overflow: hidden;
+    outline: none;
+}
+
+/* Section Game */
+
+.game {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Container Game */
+
+.game__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100vh;
+    min-height: 80vh;
+    box-sizing: border-box;
+    padding: 45px;    
+}
+
+/* Header (Zuma Logo) */
+
+h1 {
+    max-height: 95px;
+    margin-top: 95px;
+    box-sizing: border-box;
+    color: #14eaaa;
+    text-shadow: 5px 5px 5px black;
+    font-size: 100px;
+    cursor: pointer;
+    animation: logoScale 1s;
+    text-shadow: 5px 5px rgb(122, 213, 12);
+}
+
+@keyframes logoScale {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.5);;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Menu */
+
+.game__menu {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    width: 100%;
+    margin-top: 10px;
+    border: 5px solid;
+    border-image: url("./images/border.png") 100 20;
+    text-align: center;
+    color: cyan;
+    background-color: #4d1c0d;
+}
+
+.menu button {
+    color: cyan;
+    min-width: 150px;
+    min-height: 40px;
+    margin: 0 auto;
+    font-size: 32px;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Play */
+
+.game__levels {
+    width: 350px;
+    margin: 0 auto;   
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+
+.level {
+    width: 64px;
+    height: 64px;
+    margin: 10px;
+    border: 10px solid;
+    border-image: url("./images/border.png") 100 30;
+    background-color: #4d1c0d;
+    text-align: center;
+}
+
+.game__level-button {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font: inherit;
+    font-size: 32px;
+    color: cyan;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Game */
+
+.game__game-play {
+    display: flex;
+}
+
+.game__field {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 569px;
+    min-height: 384px;
+    max-width: 1280px;
+    max-height: 820px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game__score {
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+/* After Game */
+
+.game__end-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: close 3s;
+}
+
+.statistics.end {
+    margin-bottom: -1000px;
+    color: cyan;
+    font-size: 98px;
+}
+
+.next {
+    max-width: 245px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.next img {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
